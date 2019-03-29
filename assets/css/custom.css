@@ -1,0 +1,39 @@
+.notice {
+  padding: 15px;
+  background-color: #fafafa;
+  border-left: 6px solid #7f7f84;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 8px -6px rgba(0, 0, 0, .2);
+}
+
+.notice-success {
+  border-color: #80D651;
+}
+
+.notice-info {
+  border-color: #45ABCD;
+}
+
+.notice-warning {
+  border-color: #FEAF20;
+}
+
+.card:last-child {
+  -webkit-mask-image: -webkit-gradient(linear, left top,
+    left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+}
+
+.emoji {
+  margin-right: 6px;
+  margin-bottom: 3px;
+}
+
+.infos {
+  padding-top: 15px;
+}
+
+.elements {
+  padding-top: 50px;
+}

@@ -1,0 +1,21 @@
+<form phx-change="change-shown-events" class="float-right">
+    <select name="items">
+        <%= for items <- [5, 10, 25, 50] do %>
+            <option value="<%= items %>" <%= if items == @items do %>selected<% end %>>
+            Show <%= items %> last recent events 
+            </option>
+        <% end %>
+    </select>
+</form>
+<br>
+
+<div class="container elements">
+    <%= for edit <- @edits do %>
+        <div class="card notice <%= get_card_type(edit["type"]) %> animated flipInX">
+            <h5 class="card-title" style="margin-bottom: 0px;"><strong><%= edit["title"] %></strong></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= edit["type"] %> by <%= edit["user"] %></h6>
+            <p class="card-text"><%= raw(edit["parsedcomment"]) %></p>
+            <a href="<%= edit["meta"]["uri"] %>" class="card-link" target="_blank">View</a>
+        </div>
+    <% end %>
+</div>

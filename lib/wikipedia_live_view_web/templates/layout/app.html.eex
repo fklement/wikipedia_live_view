@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Felix Klement">
+    <title>WikipediaLiveView · Phoenix Framework</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>" />
+  </head>
+
+  <body>
+    <section class="phx-hero">
+      <h1>Welcome to <span class="badge badge-secondary">WikiLiveView</span>!</h1>
+      <p>Here you can view all<br /> recent events on wikipedia.com.</p>
+      <div class="infos">
+        <a class="button button-outline" href="https://gigalixir.com" target="_blank"><img class="emoji" src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png" height="20" width="20" align="absmiddle">Hosted on Gigalixir</a>
+        <a class="button button-outline" href="https://github.com/fklement/wikipedia_live_view" target="_blank"><img class="emoji" src="https://github.githubassets.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle">View Code</a>
+        <a class="button" href="https://www.felix-klement.de" target="_blank">
+          <img class="emoji" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47e.png" height=20" width="20" align="absmiddle"">Built by Felix Klement</a>
+        </button></div>
+    </section>
+    <main role=" main" class="container">
+          <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+          <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p> <%= render @view_module, @view_template, assigns %> </main>
+          <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+
+</html>
